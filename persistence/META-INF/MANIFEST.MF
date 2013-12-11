@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1386225989013
-Build-Jdk: 1.6.0_43
-Built-By: khiemnt
+Bnd-LastModified: 1386755694458
+Build-Jdk: 1.6.0_38
+Built-By: luult
 Bundle-ManifestVersion: 2
 Bundle-Name: persistence
 Bundle-SymbolicName: persistence

@@ -56,6 +56,9 @@
     <orderEntry type="module" module-name="service" />
     <orderEntry type="library" name="Maven: org.springframework.osgi:spring-osgi-core:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.osgi:spring-osgi-io:1.0.2" level="project" />
+    <orderEntry type="module" module-name="routing" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-remoting:2.0.8" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:2.0.8" level="project" />
   </component>
 </module>
 

@@ -13,6 +13,8 @@
         <module>persistence</module>
         <module>build-target</module>
         <module>service</module>
+        <module>routing</module>
+        <module>myjwebsocket</module>
     </modules>
     <properties>
         <hibernate-version>3.6.10.Final</hibernate-version>
@@ -29,6 +31,7 @@
         <logback-version>1.0.13</logback-version>
         <querydsl-version>3.2.0</querydsl-version>
         <cxf-version>2.6.3</cxf-version>
+        <camel-version>2.11.0</camel-version>
     </properties>
     <repositories>
         <repository>

@@ -26,6 +26,11 @@
             <groupId>UserAndDevice</groupId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <artifactId>routing</artifactId>
+            <groupId>UserAndDevice</groupId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

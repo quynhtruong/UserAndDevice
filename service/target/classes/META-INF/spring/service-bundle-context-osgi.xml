@@ -6,6 +6,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/osgi
        http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
     <osgi:reference id="userDAO" interface="com.qsoft.dao.UserDAO" cardinality="1..1"/>
     <osgi:reference id="toDoListDAO" interface="com.qsoft.dao.ToDoListDAO" cardinality="1..1"/>
     <osgi:reference id="deviceDAO" interface="com.qsoft.dao.DeviceDAO" cardinality="1..1"/>
