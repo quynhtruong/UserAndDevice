@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>UserAndDevice</artifactId>
-        <groupId>UserAndDevice</groupId>
+        <groupId>com.qsoft.demojwebsocket</groupId>
+        <artifactId>demojwebsocket</artifactId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -15,13 +15,13 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <artifactId>model</artifactId>
-            <groupId>UserAndDevice</groupId>
-             <version>1.0</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <artifactId>persistence</artifactId>
-            <groupId>UserAndDevice</groupId>
             <version>1.0</version>
         </dependency>
         <dependency>
@@ -30,14 +30,9 @@
             <version>${spring-version}</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.osgi</groupId>
-            <artifactId>spring-osgi-core</artifactId>
-            <version>1.0.2</version>
+            <groupId>org.jvnet.jaxb2_commons</groupId>
+            <artifactId>jaxb2-basics-runtime</artifactId>
+            <version>0.6.2</version>
         </dependency>
         <!--for testing-->
         <dependency>

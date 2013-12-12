@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>UserAndDevice</artifactId>
-        <groupId>UserAndDevice</groupId>
+        <artifactId>demojwebsocket</artifactId>
+        <groupId>com.qsoft.demojwebsocket</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -13,22 +13,22 @@
     <dependencies>
         <dependency>
             <artifactId>model</artifactId>
-            <groupId>UserAndDevice</groupId>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <version>1.0</version>
         </dependency>
         <dependency>
             <artifactId>persistence</artifactId>
-            <groupId>UserAndDevice</groupId>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <version>1.0</version>
         </dependency>
         <dependency>
             <artifactId>service</artifactId>
-            <groupId>UserAndDevice</groupId>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <version>1.0</version>
         </dependency>
         <dependency>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <artifactId>routing</artifactId>
-            <groupId>UserAndDevice</groupId>
             <version>1.0</version>
         </dependency>
     </dependencies>

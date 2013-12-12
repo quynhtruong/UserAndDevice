@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UserAndDevice.iml" filepath="$PROJECT_DIR$/UserAndDevice.iml" />
       <module fileurl="file://$PROJECT_DIR$/build-target/build-target.iml" filepath="$PROJECT_DIR$/build-target/build-target.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client-web/client-web.iml" filepath="$PROJECT_DIR$/client-web/client-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/myjwebsocket/myjwebsocket.iml" filepath="$PROJECT_DIR$/myjwebsocket/myjwebsocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/persistence/persistence.iml" filepath="$PROJECT_DIR$/persistence/persistence.iml" />

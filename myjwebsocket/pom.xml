@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>UserAndDevice</artifactId>
-        <groupId>UserAndDevice</groupId>
+        <artifactId>demojwebsocket</artifactId>
+        <groupId>com.qsoft.demojwebsocket</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -23,12 +23,12 @@
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>UserAndDevice</groupId>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <artifactId>service</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>UserAndDevice</groupId>
+            <groupId>com.qsoft.demojwebsocket</groupId>
             <artifactId>model</artifactId>
             <version>1.0</version>
         </dependency>
@@ -37,8 +37,20 @@
             <artifactId>hessian</artifactId>
             <version>4.0.7</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.4</version>
+        </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>googlecode</id>
+            <name>jWebSocket Repository</name>
+            <url>http://jwebsocket.googlecode.com/svn/repo</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>

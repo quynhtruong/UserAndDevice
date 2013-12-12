@@ -31,7 +31,7 @@ public class ToDoListServiceImpl implements ToDoListService
     public ToDoListResponseDTO addAndUpdateToDoList(ToDoListDTO toDoListDTO)
     {
         ToDoListResponseDTO responseDTO;
-        Users users = userDAO.findOne(toDoListDTO.getWebId());
+        Users users = userDAO.findOne(toDoListDTO.getUserId());
         if (users == null)
         {
             responseDTO = createResponse(Constants.FAIL, Constants.USER_DOES_NOT_EXIST);

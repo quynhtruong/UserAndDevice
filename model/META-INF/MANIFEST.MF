@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1386755692376
+Bnd-LastModified: 1386832195048
 Build-Jdk: 1.6.0_38
 Built-By: luult
 Bundle-ManifestVersion: 2
@@ -12,4 +12,5 @@ Export-Package: com.qsoft.model.dto;uses:="com.qsoft.model.common";versi
  on="1.0.0",com.qsoft.model.common;uses:="javax.persistence";version="1.
  0.0"
 Import-Package: javax.persistence
+Originally-Created-By: Apache Maven Bundle Plugin
 Tool: Bnd-1.50.0

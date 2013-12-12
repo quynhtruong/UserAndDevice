@@ -9,5 +9,5 @@
 
     <bean id="userService" class="com.qsoft.service.impl.UserServiceImpl"/>
     <bean id="toDoListService" class="com.qsoft.service.impl.ToDoListServiceImpl"/>
-    <bean id="sampleTest" class="com.qsoft.service.SampleTest" init-method="testGetToDOList"/>
+    <!--<bean id="sampleTest" class="com.qsoft.service.SampleTest" init-method="testGetToDOList"/>-->
 </beans>
