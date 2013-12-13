@@ -12,7 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.xml.crypto.Data;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
 /**
  * User: quynhtq
  * Date: 12/4/13
@@ -46,7 +50,7 @@ public class ToDoListServiceImpl implements ToDoListService
             toDoList.setUsers(users);
             toDoListDAO.save(toDoList);
             responseDTO = createResponse(Constants.SUCCESS, Constants.SUCCESS);
-            responseDTO.getToDoListDTOs().add(new ToDoListDTO(toDoList));
+            responseDTO.setToDoListDTO(new ToDoListDTO(toDoList));
         }
         else
         {
@@ -60,7 +64,7 @@ public class ToDoListServiceImpl implements ToDoListService
                 toDoList.setDescription(toDoListDTO.getDescription());
                 toDoListDAO.save(toDoList);
                 responseDTO = createResponse(Constants.SUCCESS, Constants.SUCCESS);
-                responseDTO.getToDoListDTOs().add(new ToDoListDTO(toDoList));
+                responseDTO.setToDoListDTO(new ToDoListDTO(toDoList));
             }
         }
         return responseDTO;
@@ -90,7 +94,7 @@ public class ToDoListServiceImpl implements ToDoListService
         return toDoListResponseDTO;
     }
 
-    public ToDoListResponseDTO getToDoList(ToDoListDTO toDoListDTO)
+    public ToDoListResponseDTO getToDoList2(ToDoListDTO toDoListDTO)
     {
         ToDoListResponseDTO toDoListResponseDTO;
         Long userId = toDoListDTO.getUserId();
@@ -109,7 +113,7 @@ public class ToDoListServiceImpl implements ToDoListService
         toDoListResponseDTO = createResponse(Constants.SUCCESS, Constants.SUCCESS);
         for (ToDoList toDoList : toDoLists)
         {
-            toDoListResponseDTO.getToDoListDTOs().add(new ToDoListDTO(toDoList));
+            toDoListResponseDTO.setToDoListDTO(new ToDoListDTO(toDoList));
         }
         return toDoListResponseDTO;
     }
@@ -120,5 +124,12 @@ public class ToDoListServiceImpl implements ToDoListService
         toDoListResponseDTO.setResult(result);
         toDoListResponseDTO.setMessage(message);
         return toDoListResponseDTO;
+    }
+
+    public List<ToDoList> getToDoList(Long userId, Date latestTime)
+    {
+        Users user = userDAO.findOne(userId);
+        return toDoListDAO.findByUsersAndLastUpdatedGreaterThan(user, latestTime);
+
     }
 }

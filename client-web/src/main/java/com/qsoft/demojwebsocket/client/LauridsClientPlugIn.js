@@ -11,22 +11,23 @@ jws.LauridsClientPlugIn = {
             {
                 alert("This Tutorial is done by: " + aToken.name);
             }
-            else if (aToken.reqType == "calculate")
-            {
-                alert("calculated Number is: " + aToken.calNumber);
-
-            }
             else if (aToken.reqType == "updateFromOther")
             {
                 updateFromOther(aToken.msg)
+            }
+            else if (aToken.reqType == "responseFromServer")
+            {
+                updateResponseFromServer(aToken.msg)
+            }
+            else if (aToken.reqType == "responseGetLatest")
+            {
+                updateResponseFromServer(aToken.msg)
             }
             console.log(aToken);
             console.log(aToken.reqType)
             console.log(aToken.status)
         }
     },
-    //Method is called from the button "Author"
-    //to send a request to the jwebsocketserver-> LauridsPlugIn
     requestAuthorName: function (aOptions)
     {
         if (this.isConnected())
@@ -41,29 +42,14 @@ jws.LauridsClientPlugIn = {
         }
     },
 
-    calculateMyNumber: function (inputNumber, aOptions)
-    {
-        if (this.isConnected())
-        {
-            //create the request token
-            var lToken = {
-                ns: jws.LauridsClientPlugIn.NS,
-                type: "calculate",
-                myNumber: inputNumber//add the input Number to our token
-            };
-            console.log("sending calculation request for:" + inputNumber);
-            this.sendToken(lToken, aOptions);//send it
-        }
-    },
-    addOrUpdateAToDoList: function (inputNumber, aOptions)
+    addOrUpdateAToDoList: function (message, aOptions)
     {
         if (this.isConnected())
         {
             var lToken = {
                 ns: jws.LauridsClientPlugIn.NS,
                 type: "addOrUpdateAToDoList",
-                id: inputNumber,
-                description:"abc"
+                msg: message
             };
             this.sendToken(lToken, aOptions);//send it
         }
@@ -71,18 +57,48 @@ jws.LauridsClientPlugIn = {
         {
             alert("disconnected");
         }
-    }
+    } ,
+    requestGetLatest: function(aOptions)
+    {
+        console.log("syncing.....")
+        if (this.isConnected())
+        {
+            var latestUpdate = localStorage.getItem("latestTime");
+            var lToken = {
+                ns: jws.LauridsClientPlugIn.NS,
+                type: "requestGetLatest",
+                latestUpdate: latestUpdate
+            };
+            this.sendToken(lToken, aOptions);//send it
+        }
+        else
+        {
+            console.log("disconnected");
+        }
 
+    }
 };
+function updateResponseFromServer(data)
+{
+    console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+    var updateList = JSON.parse(data)
+
+    for (var i = 0; i < updateList.length; i++)
+    {
+        var indexOfNote = findNoteWithContent(updateList[i].description)
+        toDoList[indexOfNote].webId = updateList[i].webid
+    }
+    localStorage.setItem("toDoList", toDoList);
+}
 function updateFromOther(data)
 {
     console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     console.log(data)
     var updateList = JSON.parse(data)
-    for(var i = 0; i < updateList.length; i ++)
+    for (var i = 0; i < updateList.length; i++)
     {
         var indexOfNote = findIndexOfNote(updateList[i].webId);
-        updateNoteAt(indexOfNote, updateList[i].description);
+        updateNoteAt(indexOfNote, updateList[i]);
         console.log(updateList[i].webId);
         console.log(updateList[i].description);
     }
@@ -92,24 +108,26 @@ function updateFromOther(data)
 
 function findIndexOfNote(webId)
 {
-    for(var i = 0 ; i < toDoList.length; i++)
+    for (var i = 0; i < toDoList.length; i++)
     {
         if (toDoList[i].webId == webId)
+        {
             return i;
+        }
     }
     return -1;
 }
-function updateNoteAt(index, description)
+function updateNoteAt(index, note)
 {
     if (index == -1)
     {
-        addRow(toDoList.length, description)
+        addRow(toDoList.length, note)
     }
     else
     {
         var table = document.getElementById("tableContent");
-        var row = table.rows[index+1];
-        updateRow(index, row, description)
+        var row = table.rows[index + 1];
+        updateDataRow(index, row, note)
     }
 }
 

@@ -16,8 +16,8 @@ public class SampleTest
 
     public void testGetToDOList()
     {
-        ToDoListDTO toDoListDTO = createToDoListDTO();
-        toDoListService.getToDoList(toDoListDTO);
+//        ToDoListDTO toDoListDTO = createToDoListDTO();
+//        toDoListService.getToDoList(toDoListDTO);
     }
 
     public ToDoListDTO createToDoListDTO()

@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,4 +17,6 @@ public interface ToDoListDAO extends JpaRepository<ToDoList, Long>
 {
     @Query("select tdl from ToDoList tdl where tdl.users=:users")
     List<ToDoList> findByUsers(@Param("users") Users users);
+
+    List<ToDoList> findByUsersAndLastUpdatedGreaterThan(@Param("users") Users users,@Param("date") Date date);
 }

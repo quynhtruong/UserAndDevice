@@ -1,6 +1,8 @@
 package com.qsoft.demojwebsocket.server;
 
+import com.google.gson.reflect.TypeToken;
 import com.qsoft.demojwebsocket.middletierservice.BaseService;
+import com.qsoft.model.common.ToDoList;
 import com.qsoft.model.dto.ToDoListDTO;
 import com.qsoft.model.dto.ToDoListResponseDTO;
 import com.qsoft.service.ToDoListService;
@@ -12,12 +14,18 @@ import org.jwebsocket.logging.Logging;
 import org.jwebsocket.plugins.TokenPlugIn;
 import org.jwebsocket.token.Token;
 import com.google.gson.Gson;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 /**
  * User: luult
  * Date: 12/12/13
  * Time: 9:27 AM
  */
-public class AddNote  extends TokenPlugIn
+public class AddNote extends TokenPlugIn
 {
     private static Logger mLog = Logging.getLogger(AddNote.class);
     // if you change the namespace, don't forget to change the ns_sample!
@@ -59,35 +67,71 @@ public class AddNote  extends TokenPlugIn
             else if (lType.equals("addOrUpdateAToDoList"))
             {
                 System.out.println("b3");
-                ToDoListResponseDTO toDoListResponseDTO = addNoteToServer(aToken);
-                System.out.println(toDoListResponseDTO.getToDoListDTOs());
-                System.out.println(toDoListResponseDTO.getToDoListDTOs().size());
+                List<ToDoListDTO> responseForClient = addNoteToServer(aToken);
 
                 Token lResponse = createResponse(aToken);
-//                toDoListResponseDTO.getToDoListDTOs().
                 Gson gson = new Gson();
-                String result = gson.toJson(toDoListResponseDTO.getToDoListDTOs());
-                lResponse.setString("msg",result);
+                String result = gson.toJson(responseForClient);
+                lResponse.setString("msg", result);
 
-                lResponse.setString("reqType","updateFromOther");
-                sendToken(aConnector, aConnector, lResponse);
+                lResponse.setString("reqType", "updateFromOther");
                 broadcastToken(aConnector, lResponse);
-
+                lResponse.setString("reqType", "responseFromSever");
+                sendToken(aConnector, aConnector, lResponse);
             }
-                System.out.println("b4");
+            else if (lType.equals("requestGetLatest"))
+            {
+                System.out.println("b1 requestGetLatest");
+                List<ToDoListDTO> responseForClient = getLatestUpdate(aToken);
+                Token lResponse = createResponse(aToken);
+
+                Gson gson = new Gson();
+                String result = gson.toJson(responseForClient);
+                lResponse.setString("msg", result);
+
+                lResponse.setString("reqType", "responseGetLatest");
+                sendToken(aConnector, aConnector, lResponse);
+            }
+            System.out.println("b4");
         }
     }
 
-    private ToDoListResponseDTO addNoteToServer(Token aToken)
+    private List<ToDoListDTO> getLatestUpdate(Token aToken)
     {
-        String description = aToken.getString("description");
+        String date = aToken.getString("latestUpdate");
+        System.out.println("time " + date);
+        Date latestDate = new Date();
+        ToDoListService toDoListService = BaseService.getToDoListService();
+//        ToDoListResponseDTO toDoListResponseDTO = toDoListService.getToDoList(5l, latestDate);
+//        return toDoListResponseDTO.getToDoListDTOs();
+        return null;
+    }
+
+    private List<ToDoListDTO> addNoteToServer(Token aToken)
+    {
+        String msg = aToken.getString("msg");
+        System.out.println(msg);
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<ToDoListDTO>>() {}.getType();
+
+        List<ToDoListDTO> listDTOList = gson.fromJson(msg, type);
         ToDoListService toDoListService = BaseService.getToDoListService();
 
-        ToDoListDTO toDoListDTO = new ToDoListDTO();
-        toDoListDTO.setDescription(description);
-        toDoListDTO.setWebId(null);
-        toDoListDTO.setUserId(5l);
+        List<ToDoListDTO> result = new ArrayList<ToDoListDTO>();
 
-        return  toDoListService.addAndUpdateToDoList(toDoListDTO);
+        for (ToDoListDTO toDoListDTO : listDTOList)
+        {
+            System.out.println("abc");
+            System.out.println(toDoListDTO.getWebId());
+            System.out.println(toDoListDTO.getDescription());
+            toDoListDTO.setUserId(5l);
+            ToDoListResponseDTO toDoListResponseDTO = toDoListService.addAndUpdateToDoList(toDoListDTO);
+            System.out.println(toDoListResponseDTO.getToDoListDTO().getDescription());
+            result.add(toDoListResponseDTO.getToDoListDTO());
+        }
+        System.out.println(listDTOList.size());
+        System.out.println(listDTOList);
+        System.out.println(msg);
+        return result;
     }
 }

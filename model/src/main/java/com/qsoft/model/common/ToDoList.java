@@ -1,6 +1,7 @@
 package com.qsoft.model.common;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "to_do_list")
-public class ToDoList
+public class ToDoList implements Serializable
 {
     @Id
     @Column(name = "web_id")

@@ -12,21 +12,11 @@ public class ToDoListResponseDTO implements Serializable
 {
     private String result;
     private String message;
+    private ToDoListDTO toDoListDTO;
     private List<ToDoListDTO> toDoListDTOs = new ArrayList<ToDoListDTO>();
     //constructor
     public ToDoListResponseDTO()
     {
-    }
-
-    //setter and getter
-    public List<ToDoListDTO> getToDoListDTOs()
-    {
-        return toDoListDTOs;
-    }
-
-    public void setToDoListDTOs(List<ToDoListDTO> toDoListDTOs)
-    {
-        this.toDoListDTOs = toDoListDTOs;
     }
 
     public String getResult()
@@ -39,6 +29,16 @@ public class ToDoListResponseDTO implements Serializable
         this.result = result;
     }
 
+    public ToDoListDTO getToDoListDTO()
+    {
+        return toDoListDTO;
+    }
+
+    public void setToDoListDTO(ToDoListDTO toDoListDTO)
+    {
+        this.toDoListDTO = toDoListDTO;
+    }
+
     public String getMessage()
     {
         return message;
@@ -47,5 +47,15 @@ public class ToDoListResponseDTO implements Serializable
     public void setMessage(String message)
     {
         this.message = message;
+    }
+
+    public List<ToDoListDTO> getToDoListDTOs()
+    {
+        return toDoListDTOs;
+    }
+
+    public void setToDoListDTOs(List<ToDoListDTO> toDoListDTOs)
+    {
+        this.toDoListDTOs = toDoListDTOs;
     }
 }

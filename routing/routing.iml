@@ -19,6 +19,7 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring/bundle-context.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring/bundle-osgi-context.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring/bundle-osgi-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/bundle-context.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -64,6 +65,7 @@
     <orderEntry type="library" name="Maven: cglib:cglib:2.2" level="project" />
     <orderEntry type="library" name="Maven: asm:asm:3.1" level="project" />
     <orderEntry type="library" name="Maven: javassist:javassist:3.12.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: org.ancoron.postgresql:org.postgresql:9.1.901.jdbc4.1-rc9" level="project" />
     <orderEntry type="library" name="Maven: org.jvnet.jaxb2_commons:jaxb2-basics-runtime:0.6.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-remoting:2.0.8" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.12" level="project" />
