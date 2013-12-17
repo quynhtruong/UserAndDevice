@@ -34,9 +34,14 @@ function loadFromLocalStorage()
     console.log(toDoList)
     console.log(toDoList.length)
     console.log(localStorage['toDoList']);
-    if (localStorage['toDoList'] != 'null')
-    {
-        toDoList = JSON.parse(localStorage['toDoList']);
+
+    try {
+        if (localStorage['toDoList'] != 'null')
+        {
+            toDoList = JSON.parse(localStorage['toDoList']);
+        }
+    } catch (e) {
+
     }
     console.log(toDoList)
     var table = document.getElementById("tableContent");

@@ -1,15 +1,11 @@
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.qsoft.demojwebsocket.middletierservice.BaseService;
 import com.qsoft.model.dto.RequestLatestDTO;
 import com.qsoft.model.dto.ToDoListDTO;
-import com.qsoft.model.dto.UserResponseDTO;
 import com.qsoft.service.ToDoListService;
-import com.qsoft.service.UserService;
 
-import java.lang.reflect.Type;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 /**
  * User: luult
@@ -27,8 +23,21 @@ public class Test
         RequestLatestDTO requestLatestDTO = new RequestLatestDTO();
         requestLatestDTO.setUserId(5l);
         requestLatestDTO.setLatestTime(new Date());
+        String s;
+        Format formatter;
+        Date date = new Date();
+
+// 2012-12-01
+        formatter = new SimpleDateFormat("yyyy-MM-dd ");
+        s = formatter.format(date);
+        System.out.println(date.getTime());
         ToDoListService toDoListService = BaseService.getToDoListService();
+
+        System.out.println(latestDate.toGMTString());
         System.out.println(toDoListService.getToDoList(userId,latestDate));
+
+        Date date1 = new Date(date.getTime());
+        System.out.println(date1.toString());
 
     }
 }

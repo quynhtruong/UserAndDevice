@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1386931271362
+Bnd-LastModified: 1387300610315
 Build-Jdk: 1.6.0_38
 Built-By: luult
 Bundle-ManifestVersion: 2

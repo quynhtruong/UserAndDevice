@@ -21,7 +21,7 @@ jws.LauridsClientPlugIn = {
             }
             else if (aToken.reqType == "responseGetLatest")
             {
-                updateResponseFromServer(aToken.msg)
+                updateResponseFromServer(aToken)
             }
             console.log(aToken);
             console.log(aToken.reqType)
@@ -57,17 +57,17 @@ jws.LauridsClientPlugIn = {
         {
             alert("disconnected");
         }
-    } ,
-    requestGetLatest: function(aOptions)
+    },
+    requestGetLatest: function (aOptions)
     {
         console.log("syncing.....")
         if (this.isConnected())
         {
-            var latestUpdate = localStorage.getItem("latestTime");
+            var latestUpdated = localStorage.getItem("latestUpdated");
             var lToken = {
                 ns: jws.LauridsClientPlugIn.NS,
                 type: "requestGetLatest",
-                latestUpdate: latestUpdate
+                latestUpdated: latestUpdated
             };
             this.sendToken(lToken, aOptions);//send it
         }
@@ -75,13 +75,14 @@ jws.LauridsClientPlugIn = {
         {
             console.log("disconnected");
         }
-
     }
 };
-function updateResponseFromServer(data)
+function updateResponseFromServer(token)
 {
     console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
-    var updateList = JSON.parse(data)
+    console.log(token.latestUpdated)
+    localStorage.setItem("latestUpdated", token.latestUpdated);
+    var updateList = JSON.parse(token.msg)
 
     for (var i = 0; i < updateList.length; i++)
     {

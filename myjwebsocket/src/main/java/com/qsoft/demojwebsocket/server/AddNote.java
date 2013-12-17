@@ -1,5 +1,6 @@
 package com.qsoft.demojwebsocket.server;
 
+import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.qsoft.demojwebsocket.middletierservice.BaseService;
 import com.qsoft.model.common.ToDoList;
@@ -13,7 +14,6 @@ import org.jwebsocket.kit.PlugInResponse;
 import org.jwebsocket.logging.Logging;
 import org.jwebsocket.plugins.TokenPlugIn;
 import org.jwebsocket.token.Token;
-import com.google.gson.Gson;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -82,13 +82,14 @@ public class AddNote extends TokenPlugIn
             else if (lType.equals("requestGetLatest"))
             {
                 System.out.println("b1 requestGetLatest");
-                List<ToDoListDTO> responseForClient = getLatestUpdate(aToken);
                 Token lResponse = createResponse(aToken);
+
+                List<ToDoList> responseForClient = getLatestUpdate(aToken);
+                lResponse.setLong("latestUpdated", (new Date()).getTime());
 
                 Gson gson = new Gson();
                 String result = gson.toJson(responseForClient);
                 lResponse.setString("msg", result);
-
                 lResponse.setString("reqType", "responseGetLatest");
                 sendToken(aConnector, aConnector, lResponse);
             }
@@ -96,15 +97,24 @@ public class AddNote extends TokenPlugIn
         }
     }
 
-    private List<ToDoListDTO> getLatestUpdate(Token aToken)
+    private List<ToDoList> getLatestUpdate(Token aToken)
     {
-        String date = aToken.getString("latestUpdate");
-        System.out.println("time " + date);
-        Date latestDate = new Date();
+        String latestUpdatedString = aToken.getString("latestUpdated");
+        Date latestDate;
+        if (latestUpdatedString.equals("null"))
+        {
+            latestDate = new Date(0);
+        }
+        else
+        {
+            latestDate = new Date(Long.parseLong(latestUpdatedString));
+        }
+
+        System.out.println("time " + latestDate.toGMTString());
+
         ToDoListService toDoListService = BaseService.getToDoListService();
-//        ToDoListResponseDTO toDoListResponseDTO = toDoListService.getToDoList(5l, latestDate);
-//        return toDoListResponseDTO.getToDoListDTOs();
-        return null;
+        List<ToDoList> toDoListResponseDTO = toDoListService.getToDoList(5l, latestDate);
+        return toDoListResponseDTO;
     }
 
     private List<ToDoListDTO> addNoteToServer(Token aToken)
@@ -112,7 +122,9 @@ public class AddNote extends TokenPlugIn
         String msg = aToken.getString("msg");
         System.out.println(msg);
         Gson gson = new Gson();
-        Type type = new TypeToken<List<ToDoListDTO>>() {}.getType();
+        Type type = new TypeToken<List<ToDoListDTO>>()
+        {
+        }.getType();
 
         List<ToDoListDTO> listDTOList = gson.fromJson(msg, type);
         ToDoListService toDoListService = BaseService.getToDoListService();
