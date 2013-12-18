@@ -99,17 +99,22 @@ public class AddNote extends TokenPlugIn
 
     private List<ToDoList> getLatestUpdate(Token aToken)
     {
+        System.out.println("b2");
         String latestUpdatedString = aToken.getString("latestUpdated");
+        System.out.println(latestUpdatedString);
         Date latestDate;
-        if (latestUpdatedString.equals("null"))
+        System.out.println("b3 "  );
+        if (latestUpdatedString == null ||latestUpdatedString.equals("null"))
         {
+            System.out.println("b4");
             latestDate = new Date(0);
         }
         else
         {
+            System.out.println("b5");
             latestDate = new Date(Long.parseLong(latestUpdatedString));
         }
-
+        System.out.println("b6");
         System.out.println("time " + latestDate.toGMTString());
 
         ToDoListService toDoListService = BaseService.getToDoListService();
