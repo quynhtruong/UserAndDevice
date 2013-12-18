@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/osgi
+       http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+    <osgi:reference id="userDAO" interface="com.qsoft.dao.UserDAO" cardinality="1..1"/>
+    <osgi:reference id="toDoListDAO" interface="com.qsoft.dao.ToDoListDAO" cardinality="1..1"/>
+    <osgi:reference id="deviceDAO" interface="com.qsoft.dao.DeviceDAO" cardinality="1..1"/>
+    <osgi:service ref="userService" interface="com.qsoft.service.UserService"/>
+    <osgi:service ref="toDoListService" interface="com.qsoft.service.ToDoListService"/>
+</beans>

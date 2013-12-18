@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <!-- If Google's chrome frame installed, use it! -->
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Laurids Websocket PlugIn - Web Client</title>
+</head>
+<body >
+<input id="inputNumber" type="number"></input>
+<button type="button" onclick="requestResult();">calculate</button>
+<br/>
+<button type="button" onclick="websocketClient.requestAuthorName();">Author</button>
+<br/>
+<script type="text/javascript">
+//    localStorage.setItem('favoriteflavor','vanilla')
+    var yy = localStorage['temp1'];
+
+    var note = {};
+    note.webId = null;
+    note.description = "a";
+    console.log(JSON.stringify(note))
+
+    if (yy != null)
+    var xx = JSON.parse(localStorage['temp1']);
+    localStorage.setItem('toDoList',null);
+    var car = {};
+    car.wheels = 4;
+    car.doors = 2;
+    car.sound = 'vroom';
+    car.name = 'Lightning McQueen';
+
+    car2 = {};
+    car2.wheels = 1;
+    car2.doors = 5;
+    car2.sound = 'vroom';
+    car2.name = 'Lightning McQueen';
+
+    var listCar = [car,car2];
+
+    localStorage.setItem("temp",JSON.stringify(car));
+    localStorage.setItem("listCar",JSON.stringify(listCar));
+
+    console.log(localStorage['favoriteflavor']);
+    console.log(localStorage['temp']);
+
+    var car1 = JSON.parse(localStorage['temp']);
+    console.log(car1.doors);
+
+    var listCar = JSON.parse(localStorage['listCar'])
+    console.log(listCar);
+    console.log(listCar[0].doors)
+
+</script>
+<p><a href="http://www.lauridmeyer.com">http://www.lauridmeyer.com</a></p>
+</body>
+</html>
