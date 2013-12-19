@@ -123,7 +123,7 @@ function doResponseGetLatest(aToken)
     updateFromOther(aToken.msg)
     console.log("doResponseGetLatest ..")
     console.log(aToken.latestUpdated);
-    saveLatestUpdated();
+    saveLatestUpdated(aToken.latestUpdated);
 }
 
 function findNoteWithContent(description)

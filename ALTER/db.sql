@@ -17,7 +17,7 @@ BEGIN
       web_id  BIGINT  NOT NULL DEFAULT nextval('hibernate_sequence'),
       name CHARACTER VARYING,
       password CHARACTER VARYING,
-      last_updated DATE NOT NULL DEFAULT NOW(),
+      last_updated  timestamp without time zone DEFAULT now() NOT NULL,
       CONSTRAINT user_pkey PRIMARY KEY (web_id)
     )
     WITH (
@@ -34,7 +34,7 @@ BEGIN
       web_id  BIGINT  NOT NULL DEFAULT nextval('hibernate_sequence'),
       description CHARACTER VARYING,
       is_deleted BOOLEAN,
-      last_updated DATE NOT NULL DEFAULT NOW(),
+      last_updated  timestamp without time zone DEFAULT now() NOT NULL,
       user_id BIGINT,
       CONSTRAINT to_do_list_pkey PRIMARY KEY (web_id),
       CONSTRAINT user_fk FOREIGN KEY (user_id)
@@ -54,7 +54,7 @@ BEGIN
   (
     web_id  BIGINT  NOT NULL DEFAULT nextval('hibernate_sequence'),
     name CHARACTER VARYING,
-    last_updated DATE NOT NULL DEFAULT NOW(),
+    last_updated  timestamp without time zone DEFAULT now() NOT NULL,
     user_id BIGINT,
     CONSTRAINT device_pkey PRIMARY KEY (web_id),
     CONSTRAINT user_fk FOREIGN KEY (user_id)
