@@ -20,18 +20,18 @@
     <file path="/UserDAOImpl.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386147248514" ignored="false" />
     <file path="/persistence-bundle-context.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386209557653" ignored="false" />
     <file path="E:/Services/Persistence/src/main/resources/META-INF/spring/spring-config.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386147808226" ignored="false" />
-    <file path="/a.dummy" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386927418049" ignored="false" />
+    <file path="/a.dummy" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387446224055" ignored="false" />
     <file path="/service-bundle-context-osgi.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386218879657" ignored="false" />
     <file path="/service-bundle-context.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386218853685" ignored="false" />
     <file path="/CommonService.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386217615889" ignored="false" />
     <file path="/AddToDoListDTO.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386149698191" ignored="false" />
     <file path="/CommonServiceImpl.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386216288796" ignored="false" />
-    <file path="/Users.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386210782590" ignored="false" />
+    <file path="/Users.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387426122285" ignored="false" />
     <file path="/ResponseDTO.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386209707203" ignored="false" />
     <file path="/Constants.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386217423685" ignored="false" />
     <file path="/db.sql" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386152550236" ignored="false" />
     <file path="E:/Services/db/db.sql" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386152586872" ignored="false" />
-    <file path="/fragment.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387301971616" ignored="false" />
+    <file path="/fragment.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387424882983" ignored="false" />
     <file path="/AddUserDTO.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386209865980" ignored="false" />
     <file path="/SampleTest.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386218112785" ignored="false" />
     <file path="/RemoveToDoListDTO.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386211417961" ignored="false" />
@@ -79,7 +79,7 @@
     <file path="D:/qsoft/jwebsocket/sample/demoArgument/pom.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386583926292" ignored="false" />
     <file path="D:/qsoft/jwebsocket/sample/demoArgument/src/main/java/com/qsoft/demostart/Test.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386567665691" ignored="false" />
     <file path="D:/qsoft/jwebsocket/sample/demoArgument/META-INF/MANIFEST.MF" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386583888648" ignored="false" />
-    <file path="/Test.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387305264325" ignored="false" />
+    <file path="/Test.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387425960959" ignored="false" />
     <file path="D:/qsoft/jwebsocket/sample/demoArgument/src/main/java/com/qsoft/demostart/Activator.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386573590803" ignored="false" />
     <file path="/Activator.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386574198259" ignored="false" />
     <file path="D:/qsoft/jwebsocket/sample/demoArgument/src/main/java/com/qsoft/demostart/MyActivator.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386580528864" ignored="false" />
@@ -100,7 +100,7 @@
     <file path="$PROJECT_DIR$/../../../../camel/fullTechStack/fullTechStack/rounting/META-INF/MANIFEST.MF" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386814081662" ignored="false" />
     <file path="/HttpHandlerExporter.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386784506984" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../camel/fullTechStack/fullTechStack/rounting/rounting.iml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386813120142" ignored="false" />
-    <file path="/AddNote.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387305593198" ignored="false" />
+    <file path="/AddNote.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387438099876" ignored="false" />
     <file path="/ToDoListServiceImpl.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386931218464" ignored="false" />
     <file path="$PROJECT_DIR$/../../demo_client/src/main/java/com/qsoft/jwebsocket/client/index.html" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386822445191" ignored="false" />
     <file path="D:/qsoft/jwebsocket/jWebSocketServer-1.0-b30518/jWebSocket-1.0/libs/myjwebsocket-1.0.jar!/org/springframework/context/config/spring-context-3.1.xsd" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386834483051" ignored="false" />
@@ -184,10 +184,10 @@
     <file path="D:/qsoft/jwebsocket/jWebSocketServer-1.0-b30518/jWebSocket-1.0/libs/myjwebsocket-1.0.jar!/org/springframework/context/config/spring-context-3.0.xsd" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386837075943" ignored="false" />
     <file path="D:/qsoft/jwebsocket/jWebSocketServer-1.0-b30518/jWebSocket-1.0/libs/myjwebsocket-1.0.jar!/META-INF/maven/log4j/log4j/pom.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386837075943" ignored="false" />
     <file path="D:/qsoft/jwebsocket/jWebSocketServer-1.0-b30518/jWebSocket-1.0/libs/myjwebsocket-1.0.jar!/org/springframework/jdbc/config/spring-jdbc-3.0.xsd" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386837075943" ignored="false" />
-    <file path="/js_code.js" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387301254820" ignored="false" />
+    <file path="/js_code.js" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387438429297" ignored="false" />
     <file path="$PROJECT_DIR$/../../demo/src/main/java/com/qsoft/jwebsocket/server/LauridsPlugIn.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386830316067" ignored="false" />
-    <file path="/LauridsClientPlugIn.js" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387304977657" ignored="false" />
-    <file path="/toDoList.html" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386919394382" ignored="false" />
+    <file path="/LauridsClientPlugIn.js" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387440676089" ignored="false" />
+    <file path="/toDoList.html" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387446292156" ignored="false" />
     <file path="D:/qsoft/jwebsocket/jWebSocketServer-1.0-b30518/jWebSocket-1.0/libs/myjwebsocket-1.0.jar!/META-INF/maven/org.jvnet.jaxb2_commons/jaxb2-basics-runtime/pom.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386837075943" ignored="false" />
     <file path="D:/qsoft/jwebsocket/jWebSocketServer-1.0-b30518/jWebSocket-1.0/libs/myjwebsocket-1.0.jar!/META-INF/maven/commons-digester/commons-digester/pom.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386837075943" ignored="false" />
     <file path="D:/qsoft/jwebsocket/jWebSocketServer-1.0-b30518/jWebSocket-1.0/libs/myjwebsocket-1.0.jar!/META-INF/maven/org.hibernate/hibernate-core/pom.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386837075943" ignored="false" />
@@ -226,7 +226,12 @@
     <file path="/RequestLatestDTO.java" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1386930115149" ignored="false" />
     <file path="D:/qsoft/customer/source/MT/souce1/persistence/src/main/resources/META-INF/spring/persistence-bundle-context.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387255380401" ignored="false" />
     <file path="D:/qsoft/customer/source/MT/souce1/persistence/pom.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387269063374" ignored="false" />
-    <file path="H:/qsoft/integration/source1/atlassian-ide-plugin.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387305985828" ignored="false" />
+    <file path="H:/qsoft/integration/source1/atlassian-ide-plugin.xml" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387375600521" ignored="false" />
+    <file path="/fragment.js2" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387428849239" ignored="false" />
+    <file path="/resetLocalStorage.html" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387437074558" ignored="false" />
+    <file path="/toDoListClientPlugIn.js" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387446236416" ignored="false" />
+    <file path="/utils.js" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387446204218" ignored="false" />
+    <file path="/toDoList.js" changelist="7df3a50e-d0b3-4c6f-9837-f211957e402f" time="1387446124452" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +251,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -283,48 +287,31 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="UserAndDevice" />
+    <favorites_list name="UserAndDevice">
+      <favorite_root url="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/toDoListClientPlugIn.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ToDoList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/common/ToDoList.java">
+      <file leaf-file-name="initialization.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/initialization.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="40" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+            <state line="15" column="39" selection-start="458" selection-end="458" vertical-scroll-proportion="0.48">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNote.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myjwebsocket/src/main/java/com/qsoft/demojwebsocket/server/AddNote.java">
+      <file leaf-file-name="logon.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/logon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="83" selection-start="4252" selection-end="4252" vertical-scroll-proportion="0.058441557">
-              <folding>
-                <element signature="e#4757#4770#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/qsoft/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Date.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.6.0_38/src.zip!/java/util/Date.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="10" selection-start="6339" selection-end="6339" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -333,52 +320,34 @@
       <file leaf-file-name="toDoList.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/toDoList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="17" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+            <state line="5" column="51" selection-start="277" selection-end="277" vertical-scroll-proportion="-3.4482758">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jWebSocket.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/jWebSocket.js">
+      <file leaf-file-name="toDoListClientPlugIn.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/toDoListClientPlugIn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="125" column="24" selection-start="3488" selection-end="3488" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="js_code.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js_code.js">
+      <file leaf-file-name="utils.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="26" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
+            <state line="7" column="4" selection-start="141" selection-end="177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LauridsClientPlugIn.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/LauridsClientPlugIn.js">
+      <file leaf-file-name="toDoList.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/toDoList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="61" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myjwebsocket/src/test/java/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="32" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToDoListServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/qsoft/service/impl/ToDoListServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="26" selection-start="4409" selection-end="4409" vertical-scroll-proportion="0.0">
+            <state line="51" column="23" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -394,22 +363,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/persistence/src/main/java/com/qsoft/dao/ToDoListDAO.java" />
-        <option value="$PROJECT_DIR$/persistence/src/main/java/com/qsoft/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/persistence/src/test/Test.java" />
-        <option value="$PROJECT_DIR$/persistence/src/test/Test1.java" />
-        <option value="$PROJECT_DIR$/persistence/pom.xml" />
-        <option value="$PROJECT_DIR$/model/src/main/java/com/qsoft/model/common/ToDoList.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/com/qsoft/model/dto/ToDoListResponseDTO.java" />
-        <option value="$PROJECT_DIR$/routing/src/main/resources/META-INF/spring/bundle-context.xml" />
-        <option value="$PROJECT_DIR$/model/src/main/java/com/qsoft/model/dto/RequestLatestDTO.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/qsoft/service/SampleTest.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/qsoft/service/ToDoListService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/qsoft/service/impl/ToDoListServiceImpl.java" />
-        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js_code.js" />
-        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/LauridsClientPlugIn.js" />
         <option value="$PROJECT_DIR$/myjwebsocket/src/test/java/Test.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/com/qsoft/model/common/Users.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/com/qsoft/model/common/Device.java" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/resetLocalStorage.html" />
         <option value="$PROJECT_DIR$/myjwebsocket/src/main/java/com/qsoft/demojwebsocket/server/AddNote.java" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/LauridsClientPlugIn.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/ToDoListClientPlugIn.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/logon.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js_code.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/initialization.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/toDoList.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/utils.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/toDoListClientPlugIn.js" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/toDoList.html" />
+        <option value="$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/initialization.js" />
       </list>
     </option>
   </component>
@@ -426,48 +395,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="service" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="routing" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="myjwebsocket" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -492,7 +419,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1376" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -508,7 +435,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -689,6 +616,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="qsoft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1058,6 +1039,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qsoft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demojwebsocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAndDevice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build-target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -1075,17 +1116,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1098,15 +1139,16 @@
       <recent name="D:\clone-qsoft\Dropbox\qsoft\tech_stack\jwebsocket\source\UserAndDevice\routing\src\main\resources" />
       <recent name="H:\clone-qsoft\Dropbox\qsoft (1)\tech_stack\camel-socket\UserAndDevice\camel-websocket\src\main\resources\META-INF\spring" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\clone-qsoft\Dropbox\qsoft\tech_stack\jwebsocket\source1\UserAndDevice\client-web\src\main\java\com\qsoft\demojwebsocket\client\js" />
       <recent name="D:\clone-qsoft\Dropbox\qsoft\tech_stack\jwebsocket\source\UserAndDevice\routing\src\main\resources\META-INF\spring" />
       <recent name="D:\clone-qsoft\Dropbox\qsoft\tech_stack\jwebsocket\source\UserAndDevice\routing\src\main\resources\spring\META-INF" />
       <recent name="E:\UserAndDevice\src\main\resources\META-INF\spring" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+    <key name="ImportMappingsDialog.RecentPackages">
       <recent name="" />
     </key>
   </component>
@@ -1239,6 +1281,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1267,19 +1322,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1293,13 +1335,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1321,6 +1356,13 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -1391,15 +1433,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23211567" sideWeight="0.5682211" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Sonar" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40504202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09665144" sideWeight="0.8100173" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44041452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1408,21 +1449,22 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.394958" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18721461" sideWeight="0.3609672" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1978691" sideWeight="0.6739496" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2189394" sideWeight="0.6184874" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22575757" sideWeight="0.6184874" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3815126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19178082" sideWeight="0.6739496" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32605043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Sonar" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Archetypes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.394958" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1510,105 +1552,119 @@
     </option>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/common/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="234" selection-end="257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/dto/RequestLatestDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/dto/ToDoListDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="48" selection-start="248" selection-end="260" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/qsoft/service/SampleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/persistence/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="39" selection-start="3029" selection-end="3122" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/persistence/src/main/resources/META-INF/spring/persistence-bundle-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="68" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" />
+        <state line="12" column="13" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/dto/ToDoListResponseDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/qsoft/service/ToDoListService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/toDoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/jWebSocket.js">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/dto/UserDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js_code.js">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/dto/UserResponseDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="26" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
+        <state line="8" column="13" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/LauridsClientPlugIn.js">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/common/Device.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="61" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_38/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="10" selection-start="6339" selection-end="6339" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myjwebsocket/src/test/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="32" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/qsoft/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/qsoft/service/impl/ToDoListServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="26" selection-start="4409" selection-end="4409" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/com/qsoft/model/common/ToDoList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="40" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+        <state line="12" column="43" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myjwebsocket/src/main/java/com/qsoft/demojwebsocket/server/AddNote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="83" selection-start="4252" selection-end="4252" vertical-scroll-proportion="0.058441557">
+        <state line="147" column="32" selection-start="5187" selection-end="5187" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#4757#4770#0" expanded="true" />
+            <element signature="e#6155#6168#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/resetLocalStorage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1860" selection-end="1860" vertical-scroll-proportion="-38.62069">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/jWebSocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/logon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/toDoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="51" selection-start="277" selection-end="277" vertical-scroll-proportion="-3.4482758">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/toDoListClientPlugIn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="24" selection-start="3488" selection-end="3488" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="141" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/toDoList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="23" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-web/src/main/java/com/qsoft/demojwebsocket/client/js/initialization.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="458" selection-end="458" vertical-scroll-proportion="0.48">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -49,83 +49,122 @@ public class AddNote extends TokenPlugIn
     {
         String lType = aToken.getType();
         String lNS = aToken.getNS();
-
-        System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
-        System.out.println(lNS);
-        System.out.println(lType);
+        System.out.println("starting process ...");
+        System.out.println(aToken);
         if (lType != null && lNS != null && lNS.equals(getNamespace()))
         {
-            System.out.println("b1");
             if (lType.equals("getAuthorName"))
             {
-                System.out.println("b2");
-                System.out.println("Authorname was requested");
-                Token lResponse = createResponse(aToken);//create the response
-                lResponse.setString("name", "Laurid Meyer");
-                sendToken(aConnector, aConnector, lResponse);//send the response
+                authorNameHandle(aConnector, aToken);
             }
-            else if (lType.equals("addOrUpdateAToDoList"))
+            else if (lType.equals("addToDoList"))
             {
-                System.out.println("b3");
-                List<ToDoListDTO> responseForClient = addNoteToServer(aToken);
-
-                Token lResponse = createResponse(aToken);
-                Gson gson = new Gson();
-                String result = gson.toJson(responseForClient);
-                lResponse.setString("msg", result);
-
-                lResponse.setString("reqType", "updateFromOther");
-                broadcastToken(aConnector, lResponse);
-                lResponse.setString("reqType", "responseFromSever");
-                sendToken(aConnector, aConnector, lResponse);
+                addToDoListHandle(aConnector, aToken);
+            }
+            else if (lType.equals("updateToDoList"))
+            {
+                updateToDoListHandle(aConnector, aToken);
             }
             else if (lType.equals("requestGetLatest"))
             {
-                System.out.println("b1 requestGetLatest");
-                Token lResponse = createResponse(aToken);
-
-                List<ToDoList> responseForClient = getLatestUpdate(aToken);
-                lResponse.setLong("latestUpdated", (new Date()).getTime());
-
-                Gson gson = new Gson();
-                String result = gson.toJson(responseForClient);
-                lResponse.setString("msg", result);
-                lResponse.setString("reqType", "responseGetLatest");
-                sendToken(aConnector, aConnector, lResponse);
+                requestGetLatestHandle(aConnector, aToken);
             }
-            System.out.println("b4");
         }
+    }
+
+    private void addToDoListHandle(WebSocketConnector aConnector, Token aToken)
+    {
+        System.out.println("b2 add ToDoList");
+        List<ToDoListDTO> responseForClient = addNoteToServer(aToken);
+
+        Token lResponse = createResponse(aToken);
+        Gson gson = new Gson();
+        String result = gson.toJson(responseForClient);
+        lResponse.setString("msg", result);
+
+        lResponse.setString("reqType", "updateFromOther");
+        broadcastToken(aConnector, lResponse);
+        lResponse.setString("reqType", "responseAddFromSever");
+        sendToken(aConnector, aConnector, lResponse);
+    }
+
+    private void requestGetLatestHandle(WebSocketConnector aConnector, Token aToken)
+    {
+        System.out.println("b2 RequestGetLatest");
+        Token lResponse = createResponse(aToken);
+
+        List<ToDoList> responseForClient = getLatestUpdate(aToken);
+        lResponse.setLong("latestUpdated", (new Date()).getTime());
+
+        Gson gson = new Gson();
+        String result = gson.toJson(responseForClient);
+        lResponse.setString("msg", result);
+        lResponse.setString("reqType", "responseGetLatest");
+        sendToken(aConnector, aConnector, lResponse);
+    }
+
+    private void updateToDoListHandle(WebSocketConnector aConnector, Token aToken)
+    {
+        System.out.println("b2 Update AToDoList");
+        List<ToDoListDTO> responseForClient = addNoteToServer(aToken);
+
+        Token lResponse = createResponse(aToken);
+        Gson gson = new Gson();
+        String result = gson.toJson(responseForClient);
+        lResponse.setString("msg", result);
+
+        lResponse.setString("reqType", "updateFromOther");
+        broadcastToken(aConnector, lResponse);
+        lResponse.setString("reqType", "responseUpdateFromSever");
+        sendToken(aConnector, aConnector, lResponse);
+    }
+
+    private void authorNameHandle(WebSocketConnector aConnector, Token aToken)
+    {
+        System.out.println("b2 Author name");
+        Token lResponse = createResponse(aToken);//create the response
+        lResponse.setString("name", "Laurid Meyer");
+        sendToken(aConnector, aConnector, lResponse);//send the response
     }
 
     private List<ToDoList> getLatestUpdate(Token aToken)
     {
-        System.out.println("b2");
         String latestUpdatedString = aToken.getString("latestUpdated");
-        System.out.println(latestUpdatedString);
+        System.out.println("latest time " + latestUpdatedString);
         Date latestDate;
-        System.out.println("b3 "  );
-        if (latestUpdatedString == null ||latestUpdatedString.equals("null"))
+        try
         {
-            System.out.println("b4");
+            if (latestUpdatedString == null || latestUpdatedString.equals("null"))
+            {
+                System.out.println("b4");
+                latestDate = new Date(0);
+            }
+            else
+            {
+                System.out.println("b5");
+                latestDate = new Date(Long.parseLong(latestUpdatedString));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
             latestDate = new Date(0);
         }
-        else
-        {
-            System.out.println("b5");
-            latestDate = new Date(Long.parseLong(latestUpdatedString));
-        }
-        System.out.println("b6");
+
         System.out.println("time " + latestDate.toGMTString());
 
         ToDoListService toDoListService = BaseService.getToDoListService();
         List<ToDoList> toDoListResponseDTO = toDoListService.getToDoList(5l, latestDate);
+
+        System.out.println("to do list size: " + toDoListResponseDTO.size());
+        System.out.println(toDoListResponseDTO);
+
         return toDoListResponseDTO;
     }
 
     private List<ToDoListDTO> addNoteToServer(Token aToken)
     {
+        System.out.println("adding note...");
         String msg = aToken.getString("msg");
-        System.out.println(msg);
+        System.out.println("message: " + msg);
         Gson gson = new Gson();
         Type type = new TypeToken<List<ToDoListDTO>>()
         {
@@ -138,7 +177,6 @@ public class AddNote extends TokenPlugIn
 
         for (ToDoListDTO toDoListDTO : listDTOList)
         {
-            System.out.println("abc");
             System.out.println(toDoListDTO.getWebId());
             System.out.println(toDoListDTO.getDescription());
             toDoListDTO.setUserId(5l);
@@ -146,9 +184,8 @@ public class AddNote extends TokenPlugIn
             System.out.println(toDoListResponseDTO.getToDoListDTO().getDescription());
             result.add(toDoListResponseDTO.getToDoListDTO());
         }
-        System.out.println(listDTOList.size());
+        System.out.println("list size " + listDTOList.size());
         System.out.println(listDTOList);
-        System.out.println(msg);
         return result;
     }
 }
