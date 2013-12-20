@@ -12,8 +12,8 @@ function initPage()
         websocketClient = new jws.jWebSocketJSONClient();
         logon();
         loadFromLocalStorage();
-        requestGetLatest();
-        setInterval(requestGetLatest, 5000)
+//        requestGetLatest();
+//        setInterval(requestGetLatest, 5000)
     }
     else
     {

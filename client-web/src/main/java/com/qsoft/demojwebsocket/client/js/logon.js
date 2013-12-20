@@ -1,8 +1,8 @@
 function logon()
 {
-//    var wsURL = "ws://172.16.10.37:9090/camel-tweet";// get the default server url
+    var wsURL = "ws://172.16.10.37:8787/jwebsocket/jwebsocket";// get the default server url
 
-    var wsURL = jws.getDefaultServerURL();// get the default server url
+//    var wsURL = jws.getDefaultServerURL();// get the default server url
     console.log("Connecting to " + websocketID + " at " + wsURL + "...");
 
     //get the guest username and password
