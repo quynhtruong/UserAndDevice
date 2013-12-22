@@ -14,7 +14,7 @@ public class ToDoListDTO implements Serializable
     private String description;
     private Long userId;
     private String lastUpdated;
-    private String clientId;
+    private String _id;
     //constructor
     public ToDoListDTO()
     {
@@ -32,14 +32,15 @@ public class ToDoListDTO implements Serializable
     }
     //getter and setter
 
-    public String getClientId()
+
+    public String get_id()
     {
-        return clientId;
+        return _id;
     }
 
-    public void setClientId(String clientId)
+    public void set_id(String _id)
     {
-        this.clientId = clientId;
+        this._id = _id;
     }
 
     public Long getWebId()
