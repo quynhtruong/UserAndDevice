@@ -1,10 +1,8 @@
 package com.qsoft.model.dto;
 
 import com.qsoft.model.common.ToDoList;
-import org.hibernate.exception.DataException;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * User: quynhtq
@@ -16,7 +14,7 @@ public class ToDoListDTO implements Serializable
     private String description;
     private Long userId;
     private String lastUpdated;
-
+    private String clientId;
     //constructor
     public ToDoListDTO()
     {
@@ -33,6 +31,16 @@ public class ToDoListDTO implements Serializable
         }
     }
     //getter and setter
+
+    public String getClientId()
+    {
+        return clientId;
+    }
+
+    public void setClientId(String clientId)
+    {
+        this.clientId = clientId;
+    }
 
     public Long getWebId()
     {
