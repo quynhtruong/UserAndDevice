@@ -19,7 +19,13 @@ function addRow(index, description, inputId)
     var row = table.insertRow(index + 1);
     var cell0 = row.insertCell(0);
     var cell1 = row.insertCell(1);
-    cell0.innerHTML = index;
-    cell1.innerHTML = "<input type='text' id='" + inputId
+    cell0.innerHTML = "<input type='text' id='" + inputId
         + "'   value='" + description + "' />";
+    cell1.innerHTML = "12"
+    cell1.onclick = function()
+    {
+        table.deleteRow(row.rowIndex);
+        var clientId = cell0.firstChild.id
+        websocketClient.deleteToDoList(JSON.stringify([toDoList[clientId]]));
+    }
 }

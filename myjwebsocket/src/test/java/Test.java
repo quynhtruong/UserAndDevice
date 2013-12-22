@@ -1,13 +1,6 @@
 import com.qsoft.demojwebsocket.middletierservice.BaseService;
-import com.qsoft.model.common.ToDoList;
-import com.qsoft.model.dto.RequestLatestDTO;
 import com.qsoft.model.dto.ToDoListDTO;
 import com.qsoft.service.ToDoListService;
-
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 
 /**
  * User: luult
@@ -40,9 +33,11 @@ public class Test
 //
 //        Date date1 = new Date(date.getTime());
 //        System.out.println(date1.toString());
-        Date latestDate = new Date(0);
+        ToDoListDTO toDoListDTO = new ToDoListDTO();
+        toDoListDTO.setUserId(5l);
+        toDoListDTO.setWebId(73l);
         ToDoListService toDoListService = BaseService.getToDoListService();
-        List<ToDoList> toDoListResponseDTO = toDoListService.getToDoList(5l, latestDate);
+        System.out.println(toDoListService.removeToDoList(toDoListDTO).getToDoListDTO());
 
     }
 }

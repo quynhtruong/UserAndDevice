@@ -30,6 +30,10 @@ jws.ToDoListClientPlugIn = {
             {
                 updateResponseUpdate(aToken)
             }
+            else if (aToken.reqType == "responseDeleteFromSever")
+            {
+                updateResponseUpdate(aToken)
+            }
             else if (aToken.reqType == "responseGetLatest")
             {
                 doResponseGetLatest(aToken)
@@ -37,6 +41,22 @@ jws.ToDoListClientPlugIn = {
             console.log(aToken);
             console.log(aToken.reqType)
             console.log(aToken.status)
+        }
+    },
+    commonStep: function (type, message, aOptions)
+    {
+        if (this.isConnected())
+        {
+            var lToken = {
+                ns: jws.ToDoListClientPlugIn.NS,
+                type: type,
+                msg: message
+            };
+            this.sendToken(lToken, aOptions);//send it
+        }
+        else
+        {
+            alert("disconnected");
         }
     },
     requestAuthorName: function (aOptions)
@@ -54,36 +74,15 @@ jws.ToDoListClientPlugIn = {
     },
     addToDoList: function (message, aOptions)
     {
-        if (this.isConnected())
-        {
-            var lToken = {
-                ns: jws.ToDoListClientPlugIn.NS,
-                type: "addToDoList",
-                msg: message
-            };
-            log("add note", message)
-            this.sendToken(lToken, aOptions);//send it
-        }
-        else
-        {
-            alert("disconnected");
-        }
+        this.commonStep("addToDoList", message, aOptions);
     },
     updateToDoList: function (message, aOptions)
     {
-        if (this.isConnected())
-        {
-            var lToken = {
-                ns: jws.ToDoListClientPlugIn.NS,
-                type: "updateToDoList",
-                msg: message
-            };
-            this.sendToken(lToken, aOptions);//send it
-        }
-        else
-        {
-            alert("disconnected");
-        }
+        this.commonStep("updateToDoList", message, aOptions);
+    },
+    deleteToDoList: function (message, aOptions)
+    {
+        this.commonStep("deleteToDoList", message, aOptions);
     },
     requestGetLatest: function (aOptions)
     {
@@ -105,11 +104,6 @@ jws.ToDoListClientPlugIn = {
         }
     }
 };
-
-function updateResponseUpdate(data)
-{
-    console.log("updated.........")
-}
 
 function addFromOther(data)
 {
@@ -175,6 +169,16 @@ function doResponseGetLatest(aToken)
     console.log("doResponseGetLatest ..")
     console.log(aToken.latestUpdated);
     saveLatestUpdated(aToken.latestUpdated);
+}
+
+function updateResponseUpdate(data)
+{
+    console.log("updated.........")
+}
+
+function deleteFromOther(data)
+{
+    console.log("updated.........")
 }
 
 jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ToDoListClientPlugIn);

@@ -67,6 +67,7 @@ public class AddNote extends TokenPlugIn
             }
             else if (lType.equals("deleteToDoList"))
             {
+                System.out.println(aToken);
                 deleteToDoListHandle(aConnector, aToken);
             }
             else if (lType.equals("requestGetLatest"))
@@ -197,6 +198,8 @@ public class AddNote extends TokenPlugIn
     private void deleteToDoListHandle(WebSocketConnector aConnector, Token aToken)
     {
         System.out.println("b2 delete AToDoList");
+        System.out.println(aToken);
+        System.out.println(aToken.getString("msg"));
         List<ToDoListDTO> responseForClient = deleteNote(aToken);
 
         Token lResponse = createResponse(aToken);
@@ -212,7 +215,7 @@ public class AddNote extends TokenPlugIn
 
     private List<ToDoListDTO> deleteNote(Token aToken)
     {
-        System.out.println("adding note...");
+        System.out.println("deleting note...");
         String msg = aToken.getString("msg");
         System.out.println("message: " + msg);
         Gson gson = new Gson();
@@ -231,9 +234,8 @@ public class AddNote extends TokenPlugIn
             System.out.println(toDoListDTO.getDescription());
             toDoListDTO.setUserId(5l);
             ToDoListResponseDTO toDoListResponseDTO = toDoListService.removeToDoList(toDoListDTO);
-            System.out.println(toDoListResponseDTO.getToDoListDTO().getDescription());
-            toDoListResponseDTO.getToDoListDTO().setDeleted(true);
-            result.add(toDoListResponseDTO.getToDoListDTO());
+            toDoListDTO.setDeleted(false);
+            result.add(toDoListDTO);
         }
         System.out.println("list size " + listDTOList.size());
         System.out.println(listDTOList);
