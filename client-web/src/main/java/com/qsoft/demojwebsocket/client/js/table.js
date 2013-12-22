@@ -27,5 +27,7 @@ function addRow(index, description, inputId)
         table.deleteRow(row.rowIndex);
         var clientId = cell0.firstChild.id
         websocketClient.deleteToDoList(JSON.stringify([toDoList[clientId]]));
+        delete toDoList[inputId]
+        saveToDoList()
     }
 }

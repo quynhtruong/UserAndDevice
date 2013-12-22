@@ -41,7 +41,9 @@
     var myMap = new Object();
     myMap["1"] = note;
     myMap["3"] = note;
-    console.log(myMap["4"])
+    delete myMap["3"]
+    console.log(myMap["3"])
+    console.log(Object.keys(myMap).length)
     console.log(isNull(myMap["5"]))
     for(var p in myMap)
     {

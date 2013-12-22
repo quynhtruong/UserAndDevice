@@ -40,7 +40,6 @@ jws.ToDoListClientPlugIn = {
             }
             console.log(aToken);
             console.log(aToken.reqType)
-            console.log(aToken.status)
         }
     },
     commonStep: function (type, message, aOptions)
@@ -178,7 +177,23 @@ function updateResponseUpdate(data)
 
 function deleteFromOther(data)
 {
-    console.log("updated.........")
+    console.log("delete from other")
+    console.log(data)
+    var updatedList = JSON.parse(data)
+    for (var i = 0; i < updatedList.length; i++)
+    {
+        var clientId = findClientIdByWebId(updatedList[i].webId)
+        deleteNoteWithClientId(clientId);
+    }
+    saveToDoList();
 }
 
+function deleteNoteWithClientId(clientId)
+{
+    log("delete" + clientId)
+    var input = document.getElementById(clientId);
+    var table = document.getElementById("tableContent");
+    table.deleteRow(input.parentNode.parentNode.rowIndex)
+    delete toDoList[clientId]
+}
 jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ToDoListClientPlugIn);
