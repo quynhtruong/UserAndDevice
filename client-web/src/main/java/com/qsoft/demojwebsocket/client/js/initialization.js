@@ -12,7 +12,7 @@ function initPage()
         websocketClient = new jws.jWebSocketJSONClient();
         logon();
         loadFromLocalStorage();
-        requestGetLatest();
+//        requestGetLatest();
         setInterval(requestGetLatest, 5000)
     }
     else

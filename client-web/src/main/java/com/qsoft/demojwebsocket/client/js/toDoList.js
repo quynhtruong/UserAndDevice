@@ -2,7 +2,7 @@ function addRow(index, note)
 {
     var table = document.getElementById("tableContent");
     var length = table.rows.length;
-    var row = table.insertRow(length);
+    var row = table.insertRow(index+1);
 
     updateDataRow(index, row, note);
 }
