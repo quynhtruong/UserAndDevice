@@ -206,7 +206,7 @@ public class AddNote extends TokenPlugIn
 
         lResponse.setString("reqType", "updateFromOther");
         broadcastToken(aConnector, lResponse);
-        lResponse.setString("reqType", "responseUpdateFromSever");
+        lResponse.setString("reqType", "responseDeleteFromSever");
         sendToken(aConnector, aConnector, lResponse);
     }
 
