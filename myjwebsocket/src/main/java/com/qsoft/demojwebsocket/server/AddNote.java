@@ -234,7 +234,7 @@ public class AddNote extends TokenPlugIn
             System.out.println(toDoListDTO.getDescription());
             toDoListDTO.setUserId(5l);
             ToDoListResponseDTO toDoListResponseDTO = toDoListService.removeToDoList(toDoListDTO);
-            toDoListDTO.setDeleted(false);
+            toDoListDTO.setDeleted(true);
             result.add(toDoListDTO);
         }
         System.out.println("list size " + listDTOList.size());
