@@ -86,7 +86,7 @@ public class AddNote extends TokenPlugIn
         String result = gson.toJson(responseForClient);
         lResponse.setString("msg", result);
 
-        lResponse.setString("reqType", "updateFromOther");
+        lResponse.setString("reqType", "responseAddFromOther");
         broadcastToken(aConnector, lResponse);
         lResponse.setString("reqType", "responseAddFromSever");
         sendToken(aConnector, aConnector, lResponse);
@@ -117,7 +117,7 @@ public class AddNote extends TokenPlugIn
         String result = gson.toJson(responseForClient);
         lResponse.setString("msg", result);
 
-        lResponse.setString("reqType", "updateFromOther");
+        lResponse.setString("reqType", "responseUpdateFromOther");
         broadcastToken(aConnector, lResponse);
         lResponse.setString("reqType", "responseUpdateFromSever");
         sendToken(aConnector, aConnector, lResponse);
@@ -204,7 +204,7 @@ public class AddNote extends TokenPlugIn
         String result = gson.toJson(responseForClient);
         lResponse.setString("msg", result);
 
-        lResponse.setString("reqType", "updateFromOther");
+        lResponse.setString("reqType", "responseDeleteFromOther");
         broadcastToken(aConnector, lResponse);
         lResponse.setString("reqType", "responseDeleteFromSever");
         sendToken(aConnector, aConnector, lResponse);
