@@ -18,44 +18,59 @@
 <script type="text/javascript">
     localStorage.setItem('toDoList',null);
     localStorage.setItem('latestUpdated',null);
+    localStorage.setItem('nextId',null);
 
     console.log(localStorage.getItem("latestUpdated"));
-//    localStorage.setItem('favoriteflavor','vanilla')
-    var yy = localStorage['temp1'];
 
     var note = {};
     note.webId = null;
     note.description = "a";
-    console.log(JSON.stringify(note))
 
-    if (yy != null)
-    var xx = JSON.parse(localStorage['temp1']);
-    var car = {};
-    car.wheels = 4;
-    car.doors = 2;
-    car.sound = 'vroom';
-    car.name = 'Lightning McQueen';
+    var myMap = new Object();
+    myMap["1"] = note;
+    myMap["3"] = note;
+    for(var p in myMap)
+    {
+        console.log(myMap[p])
+    }
+//    console.log(myMap)
+//    console.log(JSON.stringify(note))
+//
+//    localStorage.setItem("toDoList", JSON.stringify(myMap))
+//    var anotherMap = JSON.parse(localStorage.getItem("toDoList"))
+//    console.log(anotherMap)
+//    console.log(anotherMap["1"])
+//    console.log(Object.keys(anotherMap).length)
 
-    car2 = {};
-    car2.wheels = 1;
-    car2.doors = 5;
-    car2.sound = 'vroom';
-    car2.name = 'Lightning McQueen';
 
-    var listCar = [car,car2];
-
-    localStorage.setItem("temp",JSON.stringify(car));
-    localStorage.setItem("listCar",JSON.stringify(listCar));
-
-    console.log(localStorage['favoriteflavor']);
-    console.log(localStorage['temp']);
-
-    var car1 = JSON.parse(localStorage['temp']);
-    console.log(car1.doors);
-
-    var listCar = JSON.parse(localStorage['listCar'])
-    console.log(listCar);
-    console.log(listCar[0].doors)
+//    if (yy != null)
+//    var xx = JSON.parse(localStorage['temp1']);
+//    var car = {};
+//    car.wheels = 4;
+//    car.doors = 2;
+//    car.sound = 'vroom';
+//    car.name = 'Lightning McQueen';
+//
+//    car2 = {};
+//    car2.wheels = 1;
+//    car2.doors = 5;
+//    car2.sound = 'vroom';
+//    car2.name = 'Lightning McQueen';
+//
+//    var listCar = [car,car2];
+//
+//    localStorage.setItem("temp",JSON.stringify(car));
+//    localStorage.setItem("listCar",JSON.stringify(listCar));
+//
+//    console.log(localStorage['favoriteflavor']);
+//    console.log(localStorage['temp']);
+//
+//    var car1 = JSON.parse(localStorage['temp']);
+//    console.log(car1.doors);
+//
+//    var listCar = JSON.parse(localStorage['listCar'])
+//    console.log(listCar);
+//    console.log(listCar[0].doors)
 
 </script>
 <p><a href="http://www.lauridmeyer.com">http://www.lauridmeyer.com</a></p>

@@ -53,6 +53,7 @@ jws.ToDoListClientPlugIn = {
                 type: "addToDoList",
                 msg: message
             };
+            log("add note",message)
             this.sendToken(lToken, aOptions);//send it
         }
         else
@@ -81,7 +82,7 @@ jws.ToDoListClientPlugIn = {
         console.log("syncing.....")
         if (this.isConnected())
         {
-            var latestUpdated = localStorage.getItem("latestUpdated");
+            var latestUpdated = getLatestUpdated();
             console.log(latestUpdated)
             var lToken = {
                 ns: jws.ToDoListClientPlugIn.NS,

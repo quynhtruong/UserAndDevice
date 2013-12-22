@@ -1,3 +1,43 @@
+function addNote()
+{
+    var inputText = document.getElementById("inputText");
+    addRowTable(inputText.value)
+    var note = saveNoteToLocalStorage(inputText.value);
+    submitAddNote(note);
+    inputText.value = ""
+}
+
+function saveNoteToLocalStorage(description)
+{
+    var note = {}
+    note.webId = null;
+    note.description = description;
+    note._id = getNextId() + "";
+    log1("-----",JSON.stringify([note]));
+    addNoteToLocalStorage(note)
+    return note;
+}
+function submitAddNote(note)
+{
+    websocketClient.addToDoList(JSON.stringify([note]));
+}
+function addRowTable(description)
+{
+    var table = document.getElementById("tableContent");
+    var length = table.rows.length;
+    var row = table.insertRow(length);
+
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+//    var cell2 = row.insertCell(2);
+//    var cell3 = row.insertCell(3);
+    cell0.innerHTML = length - 1;
+    cell1.innerHTML = "<input type='text' id='" + (length - 1)
+        + "'   value='"+description+"' />";
+//    cell2.innerHTML = "";
+//    cell3.innerHTML = "";
+}
+
 function addRow(index, note)
 {
     var table = document.getElementById("tableContent");
@@ -26,22 +66,6 @@ function updateDataRow(index, row, note)
     localStorage.setItem('toDoList', JSON.stringify(toDoList));
 }
 
-function addRowTable()
-{
-    var table = document.getElementById("tableContent");
-    var length = table.rows.length;
-    var row = table.insertRow(length);
-
-    var cell0 = row.insertCell(0);
-    var cell1 = row.insertCell(1);
-//    var cell2 = row.insertCell(2);
-//    var cell3 = row.insertCell(3);
-    cell0.innerHTML = length - 1;
-    cell1.innerHTML = "<input type='text' id='" + (length - 1)
-        + "'   value='' />";
-//    cell2.innerHTML = "";
-//    cell3.innerHTML = "";
-}
 
 function submitData()
 {

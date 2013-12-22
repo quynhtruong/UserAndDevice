@@ -2,7 +2,7 @@ var websocketID = "meinTest",
     websocketClient = null,
     wsUsername = null,
     wsPassword = null;
-var toDoList = [];
+var toDoList = {};
 //Method is called when the page is loaded
 function initPage()
 {
@@ -13,7 +13,7 @@ function initPage()
         logon();
         loadFromLocalStorage();
 //        requestGetLatest();
-        setInterval(requestGetLatest, 5000)
+//        setInterval(requestGetLatest, 5000)
     }
     else
     {
@@ -23,25 +23,20 @@ function initPage()
 
 function loadFromLocalStorage()
 {
+    log("xxxxxxxxxx")
+    log(getNextId())
+    increaseNextId();
+    log(getNextId())
+    log("yyyyyyyyy")
     console.log(toDoList)
     console.log(toDoList.length)
     console.log(localStorage['toDoList']);
-    try
+    loadToDoList();
+    log1("todolist ",toDoList)
+    var i = 0;
+    for (var key in toDoList)
     {
-        if (localStorage['toDoList'] != 'null')
-        {
-            toDoList = JSON.parse(localStorage['toDoList']);
-        }
-    }
-    catch (e)
-    {
-
-    }
-    console.log(toDoList)
-    var table = document.getElementById("tableContent");
-    for (var i = 0; i < toDoList.length; i++)
-    {
-        addRow(i, toDoList[i])
+        addRow(i++, toDoList[key])
     }
 }
 function requestGetLatest()

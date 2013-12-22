@@ -36,24 +36,12 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/abc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module" module-name="model" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:3.6.10.Final" level="project" />
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.6" level="project" />
@@ -88,7 +76,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.ancoron.postgresql:org.postgresql:9.1.901.jdbc4.1-rc9" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-test:3.0.7.RELEASE" level="project" />
   </component>
 </module>
 

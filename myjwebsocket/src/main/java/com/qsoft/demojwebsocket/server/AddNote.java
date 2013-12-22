@@ -65,6 +65,10 @@ public class AddNote extends TokenPlugIn
             {
                 updateToDoListHandle(aConnector, aToken);
             }
+            else if (lType.equals("deleteToDoList"))
+            {
+                deleteToDoListHandle(aConnector, aToken);
+            }
             else if (lType.equals("requestGetLatest"))
             {
                 requestGetLatestHandle(aConnector, aToken);
@@ -189,4 +193,51 @@ public class AddNote extends TokenPlugIn
         System.out.println(listDTOList);
         return result;
     }
+
+    private void deleteToDoListHandle(WebSocketConnector aConnector, Token aToken)
+    {
+        System.out.println("b2 delete AToDoList");
+        List<ToDoListDTO> responseForClient = deleteNote(aToken);
+
+        Token lResponse = createResponse(aToken);
+        Gson gson = new Gson();
+        String result = gson.toJson(responseForClient);
+        lResponse.setString("msg", result);
+
+        lResponse.setString("reqType", "updateFromOther");
+        broadcastToken(aConnector, lResponse);
+        lResponse.setString("reqType", "responseUpdateFromSever");
+        sendToken(aConnector, aConnector, lResponse);
+    }
+
+    private List<ToDoListDTO> deleteNote(Token aToken)
+    {
+        System.out.println("adding note...");
+        String msg = aToken.getString("msg");
+        System.out.println("message: " + msg);
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<ToDoListDTO>>()
+        {
+        }.getType();
+
+        List<ToDoListDTO> listDTOList = gson.fromJson(msg, type);
+        ToDoListService toDoListService = BaseService.getToDoListService();
+
+        List<ToDoListDTO> result = new ArrayList<ToDoListDTO>();
+
+        for (ToDoListDTO toDoListDTO : listDTOList)
+        {
+            System.out.println(toDoListDTO.getWebId());
+            System.out.println(toDoListDTO.getDescription());
+            toDoListDTO.setUserId(5l);
+            ToDoListResponseDTO toDoListResponseDTO = toDoListService.removeToDoList(toDoListDTO);
+            System.out.println(toDoListResponseDTO.getToDoListDTO().getDescription());
+            toDoListResponseDTO.getToDoListDTO().setDeleted(true);
+            result.add(toDoListResponseDTO.getToDoListDTO());
+        }
+        System.out.println("list size " + listDTOList.size());
+        System.out.println(listDTOList);
+        return result;
+    }
+
 }

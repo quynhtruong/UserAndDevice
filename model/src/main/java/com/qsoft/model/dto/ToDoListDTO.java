@@ -15,6 +15,7 @@ public class ToDoListDTO implements Serializable
     private Long userId;
     private String lastUpdated;
     private String _id;
+    private Boolean isDeleted = false;
     //constructor
     public ToDoListDTO()
     {
@@ -81,5 +82,15 @@ public class ToDoListDTO implements Serializable
     public void setUserId(Long userId)
     {
         this.userId = userId;
+    }
+
+    public Boolean getDeleted()
+    {
+        return isDeleted;
+    }
+
+    public void setDeleted(Boolean deleted)
+    {
+        isDeleted = deleted;
     }
 }
