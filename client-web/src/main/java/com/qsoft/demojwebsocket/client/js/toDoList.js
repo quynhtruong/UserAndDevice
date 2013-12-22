@@ -1,8 +1,8 @@
 function addNote()
 {
     var inputText = document.getElementById("inputText");
-    addRowTable(inputText.value)
     var note = saveNoteToLocalStorage(inputText.value);
+    addToLastTable(inputText.value, note._id)
     submitAddNote(note);
     inputText.value = ""
 }
@@ -12,58 +12,12 @@ function saveNoteToLocalStorage(description)
     var note = {}
     note.webId = null;
     note.description = description;
-    note._id = getNextId() + "";
-    log1("-----",JSON.stringify([note]));
     addNoteToLocalStorage(note)
     return note;
 }
 function submitAddNote(note)
 {
     websocketClient.addToDoList(JSON.stringify([note]));
-}
-function addRowTable(description)
-{
-    var table = document.getElementById("tableContent");
-    var length = table.rows.length;
-    var row = table.insertRow(length);
-
-    var cell0 = row.insertCell(0);
-    var cell1 = row.insertCell(1);
-//    var cell2 = row.insertCell(2);
-//    var cell3 = row.insertCell(3);
-    cell0.innerHTML = length - 1;
-    cell1.innerHTML = "<input type='text' id='" + (length - 1)
-        + "'   value='"+description+"' />";
-//    cell2.innerHTML = "";
-//    cell3.innerHTML = "";
-}
-
-function addRow(index, note)
-{
-    var table = document.getElementById("tableContent");
-    var length = table.rows.length;
-    var row = table.insertRow(index+1);
-
-    updateDataRow(index, row, note);
-}
-
-function updateDataRow(index, row, note)
-{
-    if (row.cells.length == 0)
-    {
-        var cell0 = row.insertCell(0);
-        var cell1 = row.insertCell(1);
-    }
-    else
-    {
-        var cell0 = row.cells[0];
-        var cell1 = row.cells[1];
-    }
-    cell0.innerHTML = index;
-    cell1.innerHTML = "<input type='text' id='" + index
-        + "'   value='" + note.description + "' />";
-    toDoList[index] = note;
-    localStorage.setItem('toDoList', JSON.stringify(toDoList));
 }
 
 
@@ -72,75 +26,31 @@ function submitData()
     var dataToSend = getChangedData();
     if (dataToSend.length > 0)
     {
-        console.log(JSON.stringify(dataToSend))
-        saveToDoList();
-        var addedData = getAddedData(dataToSend);
-        var modifiedData = getModifiedData(dataToSend);
-        if (addedData.length > 0)
-        {
-            websocketClient.addToDoList(JSON.stringify(addedData));
-        }
-        if (modifiedData.length > 0)
-        {
-            websocketClient.updateToDoList(JSON.stringify(dataToSend));
-        }
+        websocketClient.updateToDoList(JSON.stringify(dataToSend));
     }
+    saveToDoList();
 }
 
-function getAddedData(dataToSend)
-{
-    var result = []
-    var length = 0;
-    for (var i = 0; i < dataToSend.length; i++)
-    {
-        if (dataToSend[i].webId == null)
-        {
-            result[length++] = dataToSend[i];
-        }
-    }
-    return result;
-}
-function getModifiedData(dataToSend)
-{
-    var result = []
-    var length = 0;
-    for (var i = 0; i < dataToSend.length; i++)
-    {
-        if (dataToSend[i].webId != null)
-        {
-            result[length++] = dataToSend[i];
-        }
-    }
-    return result;
-}
 function getChangedData()
 {
     var table = document.getElementById("tableContent");
-    var lengthTable = table.rows.length;
     var todoListLength = toDoList.length
     var dataToSend = [];
     var additionalNumber = 0;
-    for (var i = 0; i < todoListLength; i++)
+    for (var key in toDoList)
     {
-        var input = document.getElementById(i + "");
-        console.log(input.value)
-        if (input.value != toDoList[i].description)
+        var input = document.getElementById(key + "");
+        if (input.value != toDoList[key].description)
         {
-            toDoList[i].description = input.value
+            toDoList[key].description = input.value
+
             var note = {};
-            note.webId = toDoList[i].webId;
+            note.webId = toDoList[key].webId;
             note.description = input.value;
+
             dataToSend[additionalNumber++] = note;
         }
     }
-    for (var i = todoListLength; i < lengthTable - 1; i++)
-    {
-        var input = document.getElementById(i + "");
-        var note = {};
-        note.webId = null;
-        note.description = input.value;
-        toDoList[i] = note;
-        dataToSend[additionalNumber++] = note;
-    }
+
     return dataToSend;
 }

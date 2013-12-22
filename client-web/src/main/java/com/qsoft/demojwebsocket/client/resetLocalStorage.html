@@ -16,6 +16,18 @@
 <button type="button" onclick="websocketClient.requestAuthorName();">Author</button>
 <br/>
 <script type="text/javascript">
+    function isNull(obj)
+    {
+        if (obj == null)
+            return true
+        else
+        if (isNaN(obj))
+            return true;
+        if (typeof obj == "undefined")
+            return true;
+        return false;
+    }
+
     localStorage.setItem('toDoList',null);
     localStorage.setItem('latestUpdated',null);
     localStorage.setItem('nextId',null);
@@ -29,6 +41,8 @@
     var myMap = new Object();
     myMap["1"] = note;
     myMap["3"] = note;
+    console.log(myMap["4"])
+    console.log(isNull(myMap["5"]))
     for(var p in myMap)
     {
         console.log(myMap[p])

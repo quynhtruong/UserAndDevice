@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <table id ="table">
+        <tr></tr>
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+                <input type="text" id ="1">
+            </td>
+        </tr>
+
+    </table>
+    <script>
+        var table = document.getElementById("table");
+        var row = table.rows[1];
+        var cell1 = row.cells[1];
+        for(var x in cell1)
+        {
+            console.log(x)
+        }
+        console.log(cell1.firstElementChild.id)
+    </script>
+</body>
+</html>

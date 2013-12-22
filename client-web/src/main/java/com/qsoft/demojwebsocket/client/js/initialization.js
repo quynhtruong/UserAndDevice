@@ -23,20 +23,13 @@ function initPage()
 
 function loadFromLocalStorage()
 {
-    log("xxxxxxxxxx")
-    log(getNextId())
-    increaseNextId();
-    log(getNextId())
-    log("yyyyyyyyy")
     console.log(toDoList)
-    console.log(toDoList.length)
     console.log(localStorage['toDoList']);
     loadToDoList();
     log1("todolist ",toDoList)
-    var i = 0;
     for (var key in toDoList)
     {
-        addRow(i++, toDoList[key])
+        addToLastTable(toDoList[key].description, toDoList[key]._id)
     }
 }
 function requestGetLatest()

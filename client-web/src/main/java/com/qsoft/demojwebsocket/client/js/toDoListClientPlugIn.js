@@ -10,9 +10,17 @@ jws.ToDoListClientPlugIn = {
             {
                 alert("This Tutorial is done by: " + aToken.name);
             }
-            else if (aToken.reqType == "updateFromOther")
+            else if (aToken.reqType == "responseAddFromOther")
+            {
+                addFromOther(aToken.msg)
+            }
+            else if (aToken.reqType == "responseUpdateFromOther")
             {
                 updateFromOther(aToken.msg)
+            }
+            else if (aToken.reqType == "responseDeleteFromOther")
+            {
+                deleteFromOther(aToken.msg)
             }
             else if (aToken.reqType == "responseAddFromSever")
             {
@@ -53,7 +61,7 @@ jws.ToDoListClientPlugIn = {
                 type: "addToDoList",
                 msg: message
             };
-            log("add note",message)
+            log("add note", message)
             this.sendToken(lToken, aOptions);//send it
         }
         else
@@ -103,6 +111,22 @@ function updateResponseUpdate(data)
     console.log("updated.........")
 }
 
+function addFromOther(data)
+{
+    log("adding from other..........")
+    var addedList = JSON.parse(data)
+    for (var i = 0; i < addedList.length; i++)
+    {
+        var clientId = addedList[i]._id;
+        if (isNull(toDoList[addedList[i]._id + ""]))
+        {
+            var note = addNoteToLocalStorage(addedList[i])
+            clientId = note._id;
+        }
+        addToLastTable(addedList[i].description, clientId);
+    }
+}
+
 function updateResponseAdd(token)
 {
     console.log("updateResponseAdd ...............")
@@ -110,13 +134,39 @@ function updateResponseAdd(token)
 
     for (var i = 0; i < updateList.length; i++)
     {
-        var indexOfNote = findNoteWithContent(updateList[i].description)
-        console.log("index of note "+indexOfNote)
-        toDoList[indexOfNote].webId = updateList[i].webId
+        toDoList[updateList[i]._id].webId = updateList[i].webId
     }
-    console.log("to do list")
-    console.log(toDoList)
     saveToDoList();
+}
+
+function updateFromOther(data)
+{
+    console.log("update from other")
+    console.log(data)
+    var updatedList = JSON.parse(data)
+    for (var i = 0; i < updatedList.length; i++)
+    {
+        var clientId = findClientIdByWebId(updatedList[i].webId)
+        updateNoteWithClientId(clientId, updatedList[i].description);
+    }
+    saveToDoList();
+};
+
+function findClientIdByWebId(webId)
+{
+    for (var key in toDoList)
+    {
+        if (toDoList[key].webId == webId)
+        {
+            return key;
+        }
+    }
+}
+function updateNoteWithClientId(clientId, description)
+{
+    var input = document.getElementById(clientId);
+    toDoList[clientId].description = description;
+    input.value = toDoList[clientId].description
 }
 
 function doResponseGetLatest(aToken)
@@ -125,59 +175,6 @@ function doResponseGetLatest(aToken)
     console.log("doResponseGetLatest ..")
     console.log(aToken.latestUpdated);
     saveLatestUpdated(aToken.latestUpdated);
-}
-
-function findNoteWithContent(description)
-{
-    for (var i = 0; i < toDoList.length; i++)
-    {
-        if ((toDoList[i].webId == null) && (toDoList[i].description == description))
-        {
-            return i;
-        }
-    }
-}
-
-function updateFromOther(data)
-{
-    console.log("update from other")
-    console.log(data)
-    var updateList = JSON.parse(data)
-    for (var i = 0; i < updateList.length; i++)
-    {
-        var indexOfNote = findIndexOfNote(updateList[i].webId);
-        console.log(indexOfNote)
-        updateNoteAt(indexOfNote, updateList[i]);
-        console.log(updateList[i].webId);
-        console.log(updateList[i].description);
-    }
-    console.log(data);
-    console.log("aaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
-};
-
-function findIndexOfNote(webId)
-{
-    for (var i = 0; i < toDoList.length; i++)
-    {
-        if (toDoList[i].webId == webId)
-        {
-            return i;
-        }
-    }
-    return -1;
-}
-function updateNoteAt(index, note)
-{
-    if (index == -1)
-    {
-        addRow(toDoList.length, note)
-    }
-    else
-    {
-        var table = document.getElementById("tableContent");
-        var row = table.rows[index + 1];
-        updateDataRow(index, row, note)
-    }
 }
 
 jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ToDoListClientPlugIn);

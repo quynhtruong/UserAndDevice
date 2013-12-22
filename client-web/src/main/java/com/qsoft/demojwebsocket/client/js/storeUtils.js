@@ -2,7 +2,7 @@ function log(objectx)
 {
     console.log(objectx)
 }
-function log1(message,objectx)
+function log1(message, objectx)
 {
     console.log(message + objectx)
 }
@@ -19,7 +19,9 @@ function loadToDoList()
         toDoList = {}
     }
     if (toDoList == null)
+    {
         toDoList = {}
+    }
 }
 function getNoteById(_id)
 {
@@ -37,8 +39,10 @@ function addNoteToLocalStorage(note)
 {
     var nextId = getNextId()
     increaseNextId();
+    note._id = nextId;
     toDoList[nextId + ""] = note;
     saveToDoList();
+    return note;
 }
 function saveToDoList()
 {
@@ -59,7 +63,7 @@ function getNextId()
     if (isNull(nextId))
     {
         var nextId = 1;
-        localStorage.setItem("nextId",1);
+        localStorage.setItem("nextId", 1);
     }
     return nextId;
 }
@@ -78,11 +82,16 @@ function increaseNextId()
 function isNull(obj)
 {
     if (obj == null)
-        return truel
-    else
-    if (isNaN(obj))
+    {
+        return true
+    }
+    else if (isNaN(obj))
+    {
         return true;
+    }
     if (typeof obj == "undefined")
+    {
         return true;
+    }
     return false;
 }
