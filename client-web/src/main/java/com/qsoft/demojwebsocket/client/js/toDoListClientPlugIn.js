@@ -36,6 +36,7 @@ jws.ToDoListClientPlugIn = {
             }
             else if (aToken.reqType == "responseGetLatest")
             {
+                log("bbbbbbbbb")
                 doResponseGetLatest(aToken)
             }
             console.log(aToken);
@@ -110,16 +111,22 @@ function addFromOther(data)
     var addedList = JSON.parse(data)
     for (var i = 0; i < addedList.length; i++)
     {
-        var clientId = addedList[i]._id;
-        if (isNull(toDoList[addedList[i]._id + ""]))
-        {
-            var note = addNoteToLocalStorage(addedList[i])
-            clientId = note._id;
-        }
-        addToLastTable(addedList[i].description, clientId);
+        addNewRowWithClientId(addedList[i]._id, addedList[i])
     }
 }
-
+function addNewRowWithClientId( clientId, noteFromServer)
+{
+    log("xxx")
+    if (isNull(toDoList[clientId + ""]))
+    {
+        log("yyy")
+        var note = addNoteToLocalStorage(noteFromServer)
+        clientId = note._id;
+        log("yyy1")
+    }
+    addToLastTable(noteFromServer.description, clientId);
+    log("ttt")
+}
 function updateResponseAdd(token)
 {
     console.log("updateResponseAdd ...............")
@@ -132,6 +139,12 @@ function updateResponseAdd(token)
     saveToDoList();
 }
 
+function updateWithWebId(webId, description)
+{
+    var clientId = findClientIdByWebId(webId)
+    updateNoteWithClientId(clientId, description);
+    return clientId;
+}
 function updateFromOther(data)
 {
     console.log("update from other")
@@ -139,8 +152,7 @@ function updateFromOther(data)
     var updatedList = JSON.parse(data)
     for (var i = 0; i < updatedList.length; i++)
     {
-        var clientId = findClientIdByWebId(updatedList[i].webId)
-        updateNoteWithClientId(clientId, updatedList[i].description);
+        updateWithWebId(updatedList[i].webId, updatedList[i].description)
     }
     saveToDoList();
 };
@@ -149,25 +161,19 @@ function findClientIdByWebId(webId)
 {
     for (var key in toDoList)
     {
+        log(toDoList[key].webId+"  "+ webId)
         if (toDoList[key].webId == webId)
         {
             return key;
         }
     }
+    return -1;
 }
 function updateNoteWithClientId(clientId, description)
 {
     var input = document.getElementById(clientId);
     toDoList[clientId].description = description;
     input.value = toDoList[clientId].description
-}
-
-function doResponseGetLatest(aToken)
-{
-    updateFromOther(aToken.msg)
-    console.log("doResponseGetLatest ..")
-    console.log(aToken.latestUpdated);
-    saveLatestUpdated(aToken.latestUpdated);
 }
 
 function updateResponseUpdate(data)
@@ -182,10 +188,16 @@ function deleteFromOther(data)
     var updatedList = JSON.parse(data)
     for (var i = 0; i < updatedList.length; i++)
     {
-        var clientId = findClientIdByWebId(updatedList[i].webId)
-        deleteNoteWithClientId(clientId);
+        deleteWithWebId(updatedList[i].webId);
     }
     saveToDoList();
+}
+function deleteWithWebId(webId)
+{
+    var clientId = findClientIdByWebId(webId)
+    log(clientId)
+    deleteNoteWithClientId(clientId);
+    return clientId;
 }
 
 function deleteNoteWithClientId(clientId)
@@ -196,4 +208,30 @@ function deleteNoteWithClientId(clientId)
     table.deleteRow(input.parentNode.parentNode.rowIndex)
     delete toDoList[clientId]
 }
+
+function doResponseGetLatest(aToken)
+{
+    log("ccccccccccccc")
+    var updatedList = JSON.parse(aToken.msg)
+    log("ttttttttt")
+    log(updatedList)
+    for (var i = 0; i < updatedList.length; i++)
+    {
+        log(updatedList[i].isDeleted)
+        if (updatedList[i].isDeleted)
+        {
+            log("delete--------------"+ updatedList[i].webId)
+            deleteWithWebId(updatedList[i].webId)
+        }
+        else if (findClientIdByWebId(updatedList[i].webId) != -1)
+        {
+            updateWithWebId(updatedList[i].webId, updatedList[i].description )
+        }
+        else
+        {
+            addNewRowWithClientId(updatedList[i]._id, updatedList[i])
+        }
+    }
+}
+
 jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ToDoListClientPlugIn);

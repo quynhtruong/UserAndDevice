@@ -13,7 +13,7 @@ function initPage()
         logon();
         loadFromLocalStorage();
 //        requestGetLatest();
-//        setInterval(requestGetLatest, 5000)
+        setInterval(requestGetLatest, 5000)
     }
     else
     {
