@@ -114,7 +114,7 @@ function addFromOther(data)
         addNewRowWithClientId(addedList[i]._id, addedList[i])
     }
 }
-function addNewRowWithClientId( clientId, noteFromServer)
+function addNewRowWithClientId(clientId, noteFromServer)
 {
     log("xxx")
     if (isNull(toDoList[clientId + ""]))
@@ -161,7 +161,7 @@ function findClientIdByWebId(webId)
 {
     for (var key in toDoList)
     {
-        log(toDoList[key].webId+"  "+ webId)
+        log(toDoList[key].webId + "  " + webId)
         if (toDoList[key].webId == webId)
         {
             return key;
@@ -194,9 +194,11 @@ function deleteFromOther(data)
 }
 function deleteWithWebId(webId)
 {
+    log("before deleteWithWebId " + webId)
     var clientId = findClientIdByWebId(webId)
-    log(clientId)
+    log("deleteWithWebId " + clientId)
     deleteNoteWithClientId(clientId);
+    log("deleted..")
     return clientId;
 }
 
@@ -204,9 +206,12 @@ function deleteNoteWithClientId(clientId)
 {
     log("delete" + clientId)
     var input = document.getElementById(clientId);
-    var table = document.getElementById("tableContent");
-    table.deleteRow(input.parentNode.parentNode.rowIndex)
-    delete toDoList[clientId]
+    if (input != null)
+    {
+        var table = document.getElementById("tableContent");
+        table.deleteRow(input.parentNode.parentNode.rowIndex)
+        delete toDoList[clientId]
+    }
 }
 
 function doResponseGetLatest(aToken)
@@ -220,18 +225,22 @@ function doResponseGetLatest(aToken)
         log(updatedList[i].isDeleted)
         if (updatedList[i].isDeleted)
         {
-            log("delete--------------"+ updatedList[i].webId)
+            log("sync delete--------------" + updatedList[i].webId)
             deleteWithWebId(updatedList[i].webId)
         }
         else if (findClientIdByWebId(updatedList[i].webId) != -1)
         {
-            updateWithWebId(updatedList[i].webId, updatedList[i].description )
+            log("sync update---------")
+            updateWithWebId(updatedList[i].webId, updatedList[i].description)
         }
         else
         {
+            log("sync add")
             addNewRowWithClientId(updatedList[i]._id, updatedList[i])
         }
     }
+    saveLatestUpdated(aToken.latestUpdated)
+    log("updated...")
 }
 
 jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ToDoListClientPlugIn);

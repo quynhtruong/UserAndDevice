@@ -21,7 +21,7 @@ function addRow(index, description, inputId)
     var cell1 = row.insertCell(1);
     cell0.innerHTML = "<input type='text' id='" + inputId
         + "'   value='" + description + "' />";
-    cell1.innerHTML = "12"
+    cell1.innerHTML = "<img src='image/123.jpg' height='20' >"
     cell1.onclick = function()
     {
         table.deleteRow(row.rowIndex);
