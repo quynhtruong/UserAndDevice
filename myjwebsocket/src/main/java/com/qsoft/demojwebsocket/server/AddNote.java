@@ -149,7 +149,9 @@ public class AddNote extends TokenPlugIn
                 System.out.println("b5");
                 latestDate = new Date(Long.parseLong(latestUpdatedString));
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
             latestDate = new Date(0);
         }
@@ -160,6 +162,8 @@ public class AddNote extends TokenPlugIn
         List<ToDoList> toDoListResponseDTO = toDoListService.getToDoList(5l, latestDate);
 
         System.out.println("to do list size: " + toDoListResponseDTO.size());
+        System.out.println(toDoListResponseDTO);
+        System.out.println(toDoListResponseDTO);
         System.out.println(toDoListResponseDTO);
 
         return toDoListResponseDTO;
