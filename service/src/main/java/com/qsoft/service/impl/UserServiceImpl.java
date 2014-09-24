@@ -23,6 +23,10 @@ public class UserServiceImpl implements UserService
 
     public UserResponseDTO addAndUpdateUser(UserDTO userDTO)
     {
+        if (userDTO == null)
+        {
+            return null;
+        }
         UserResponseDTO userResponseDTO;
         if (userDTO.getName() == null || userDTO.getPassword() == null ||
                 "".equals(userDTO.getName()) || "".equals(userDTO.getPassword()))
