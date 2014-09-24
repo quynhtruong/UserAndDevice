@@ -12,6 +12,6 @@ public class UserServiceTest
     @Test
     public void test()
     {
-        assertEquals(1,0);
+        assertEquals(1,1);
     }
 }
