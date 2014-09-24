@@ -14,8 +14,8 @@
         <module>build-target</module>
         <module>service</module>
         <module>routing</module>
-        <module>myjwebsocket</module>
-        <module>client-web</module>
+        <!--<module>myjwebsocket</module>-->
+        <!--<module>client-web</module>-->
     </modules>
     <properties>
         <hibernate-version>3.6.10.Final</hibernate-version>
