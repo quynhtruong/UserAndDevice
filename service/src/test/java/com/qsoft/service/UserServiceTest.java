@@ -4,7 +4,7 @@ import com.qsoft.model.dto.UserResponseDTO;
 import com.qsoft.service.impl.UserServiceImpl;
 import org.junit.Test;
 
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by quynhtq on 9/24/14.
@@ -17,6 +17,6 @@ public class UserServiceTest
     {
         userService = new UserServiceImpl();
         UserResponseDTO userResponseDTO = userService.addAndUpdateUser(null);
-        assertNull(userResponseDTO);
+        assertNotNull(userResponseDTO);
     }
 }
